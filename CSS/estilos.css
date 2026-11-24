@@ -1,0 +1,108 @@
+/* Configuración general y paleta de colores */
+:root {
+  --fondo-oscuro: #181024;
+  --tarjeta-fondo: #251936;
+  --naranja-cempasuchil: #ff7b00;
+  --amarillo-vela: #ffb703;
+  --magenta-mexicano: #d90429;
+  --texto-claro: #f4f1ea;
+  --texto-secundario: #d0c7dc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--fondo-oscuro);
+  color: var(--texto-claro);
+  line-height: 1.7;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: radial-gradient(#32214a 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Estilo directo sobre los elementos del body original */
+body > * {
+  width: 100%;
+  max-width: 780px;
+  background-color: var(--tarjeta-fondo);
+  padding-left: 3rem;
+  padding-right: 3rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Título principal */
+h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--naranja-cempasuchil);
+  font-size: 2.3rem;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 16px 16px 0 0;
+  border-top: 6px solid var(--naranja-cempasuchil);
+}
+
+/* Párrafos */
+p {
+  padding-bottom: 1.3rem;
+  font-size: 1.08rem;
+  color: var(--texto-secundario);
+}
+
+p:last-of-type {
+  padding-bottom: 3rem;
+  border-radius: 0 0 16px 16px;
+  border-bottom: 6px solid var(--magenta-mexicano);
+}
+
+/* Estilo especial para el subtítulo con <strong> */
+p strong {
+  display: block;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--amarillo-vela);
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px dashed rgba(255, 123, 0, 0.4);
+}
+
+/* Estilo de la imagen */
+img {
+  display: block;
+  margin: 1rem auto 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid var(--naranja-cempasuchil);
+  box-shadow: 0 8px 20px rgba(255, 123, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* Ajustes para pantallas pequeñas (celulares) */
+@media (max-width: 600px) {
+  body > * {
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+    padding-top: 1.8rem;
+  }
+  p:last-of-type {
+    padding-bottom: 1.8rem;
+  }
+}
